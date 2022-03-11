@@ -7,11 +7,13 @@ form#match_input
     padding: 20px;
     width: 400px;
     height: 150px;
+    color: black;
 }
 
 form#match_input ol li
 {
     background: rgba(255,255,255,.3);
+    color: darkgrey;
     border-color: #e3ebc3;
     border-color: rgba(255,255,255,.6);
     border-style: solid;
@@ -53,7 +55,7 @@ form#match_input button
     color: #ffffff;
     display: inline;
     letter-spacing: 1px;
-    margin: 0px 0 0 0px;
+    margin: 0px 10px 0px 0px;
     padding: px 0px;
     text-shadow: 0 1px 1px #000000;
 }

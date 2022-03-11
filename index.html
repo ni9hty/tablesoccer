@@ -22,7 +22,19 @@
  
 <script src="js/cursor.v1.0.0.js"></script>
 <script src="js/db.js"></script>
+<script>
+$(document).ready(function(){
+    $('#show_admin').click(function() {
+      $('.admin').toggle("slide");
+    });
+});
+$(document).ready(function(){
+    $('#show_stats').click(function() {
+      $('.stats').toggle("slide");
+    });
+});
 
+</script>
 
 </head>
 <body>
@@ -52,21 +64,23 @@
 </nav>
 </header>
 
+
 <div class="container wrapper">		
   <div class="row">
     <div class="col-sm-3 col-centered">
 	
     </div>
   </div>
-			
+
 <div class="row">
   <div class="col-xs-12 user-profile text-center">
   Hier fiese stats
-
   </div>
 </div>
+
+ <div id="show_admin">Admin panel</div>
 <div class="row">
-  <div class="col-xs-12 user-social text-center col-centered">
+  <div class="col-xs-12 user-social text-center col-centered admin" style="display: none;">
     <form id="match_input">
       <fieldset>
       <ol>
@@ -113,10 +127,11 @@
     </form><br />
 
   </div>
-  </div>
+</div>
 
+<div id="show_stats">Stats</div>
 <div class="row">
-  <div class="col-md-7 user-description text-center col-centered">
+  <div class="col-md-7 user-description text-center col-centered stats">
     <div id="results"></div>
   </div>
 </div>
