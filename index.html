@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de-de">
+<head>
+<title> Tablesoccer stats </title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/nix.css">
+<link rel="stylesheet" href="css/form.css">
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+ 
+<script src="js/cursor.v1.0.0.js"></script>
+<script src="js/db.js"></script>
+
+
+</head>
+<body>
+<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" id="green-terminal" href=https://gizn.de>gizn@gizn.de ~></a> 
+          <p cursor-animate id="green-terminal" class=navbar-brand>Fhain tablesoccer stats to the limit</p>
+	</div>
+		
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+	  <li>
+	    Kickerlogo
+	  </li>
+
+	  </ul>
+	</div>
+    </div>
+</nav>
+</header>
+
+<div class="container wrapper">		
+  <div class="row">
+    <div class="col-sm-3 col-centered">
+	
+    </div>
+  </div>
+			
+<div class="row">
+  <div class="col-xs-12 user-profile text-center">
+  Hier fiese stats
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 user-social text-center col-centered">
+    <form id="match_input">
+      <fieldset>
+      <ol>
+        <li>
+        <label for="Team1Player1">Team1 Player1</label>
+        <input id="Team1Player1" type="text">
+        <input type="hidden" id="id"/>
+        </li>
+      
+        <li>
+        <label for="Team1Player2">Team1 Player2</label>
+        <input id="Team1Player2" type="text">
+	</li>	
+
+	<li>
+        <label for="Team2Player1">Team2 Player1</label>
+        <input id="Team2Player1" type="text">
+	</li>
+
+	<li>
+        <label for="Team2Player2">Team2 Player2</label>
+        <input id="Team2Player2" type="text">
+	</li>
+
+	<li>
+        <label for="Team1Result">Team1 Result</label>
+        <input id="Team1Result" type="text">
+	</li>
+
+	<li>
+        <label for="Team2Result">Team2 Result  </label>
+        <input id="Team2Result" type="text">
+	</li>
+      </ol>
+      </fieldset>
+ 
+      <button id="btnReset" type=submit>Reset</button>
+ 
+      <button id="submitButton" type="submit">SAVE</button>
+ 
+      <button id="btnUpdate" type=submit>UPDATE</button>
+ 
+<!--  <button id="btnDrop" type=submit>DROP</button>  disabled for now-->
+    </form><br />
+
+  </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-7 user-description text-center col-centered">
+    <div id="results"></div>
+  </div>
+</div>
+
+
+<div class="push"></div>
+</div>
+  <footer class="footer text-center">
+  <p>Copyright &copy; 2022 giZn -
+    <span class="credit">
+	Powered by
+	<a target="_blank" href="https://gizn.de">gizn</a>
+    </span>
+  </p>
+</footer>
+
+</body>
+</html>
