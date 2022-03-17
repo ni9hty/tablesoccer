@@ -15,10 +15,11 @@
 
 <link rel="stylesheet" href="css/nix.css">
 <link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="css/newmatch.css">
 
 <link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link href="pics/favicon.ico" rel="icon" type="image/x-icon" />
  
 <script src="js/cursor.v1.0.0.js"></script>
 <script src="js/db.js"></script>
@@ -33,7 +34,20 @@ $(document).ready(function(){
       $('.stats').toggle("slide");
     });
 });
+</script>
 
+<script type="module">
+import interact from
+'https://cdn.interactjs.io/v1.10.11/interactjs/index.js'
+
+interact('.item').draggable({
+  listeners: {
+    move (event) {
+      console.log(event.pageX,
+                  event.pageY)
+    }
+  }
+})
 </script>
 
 </head>
@@ -74,9 +88,31 @@ $(document).ready(function(){
 
 <div class="row">
   <div class="col-xs-12 user-profile text-center">
-  Hier fiese stats
+    <div class="modal-box">
+      <button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+        NewMatch
+      </button>
+
+      <!-- New Match Overlay -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="modal-body">
+              <h3 class="title">New Match</h3>
+	      <div id="Team1_PLayer1" class="drag-drop"> gizn </div>
+	      <div id="Team1_PLayer2" class="drag-drop"> Nico </div>
+	      <div id="Team2_PLayer1" class="drag-drop"> David </div>
+	      <div id="Team2_PLayer2" class="drag-drop"> Phil </div>
+	      <div id="t1p1-dropzone" class="dropzone">#t1p1-dropzone</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 
  <div id="show_admin">Admin panel</div>
 <div class="row">
