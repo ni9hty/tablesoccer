@@ -54,11 +54,28 @@
     margin: 0 0 10px;
 }
 
-#t1p1-dropzone {
+/*.versus {
+  font-size: 100px;
+  position: absolute;
+  margin: 20px 10px 10px 200px;
+}*/
+
+.inner-dropzones-left {
+  float: left;
+  box-sizing: border-box;
   height:90px;
   width: 150px;
-/*  position: absolute;*/
   left: 10px;
+  color: darkgrey;
+  width: 150px;
+  border: 3px solid;
+}
+
+.inner-dropzones-right {
+  float: right;
+  height:90px;
+  width: 150px;
+  right: 10px;
   color: darkgrey;
   width: 150px;
   border: 3px solid;
@@ -66,12 +83,11 @@
 
 .dropzone {
   color: darkgrey;
-  background-color: #bfe4ff;
+  background-color: #3a4341;
   border: dashed 4px transparent;
   border-radius: 4px;
-  margin: 10px auto 30px;
+  margin: 10px 0px 10px 10px;
   padding: 10px;
-  width: 80%;
   transition: background-color 0.3s;
 }
 
@@ -80,7 +96,7 @@
 }
 
 .drop-target {
-  background-color: #29e;
+  background-color: #2b2b2b;
   border-color: #fff;
   border-style: solid;
 }
