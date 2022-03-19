@@ -41,7 +41,10 @@
 }
 .close:focus{ outline: none; }
 
-.modal-body{ padding: 60px 40px 40px !important; }
+.modal-body{ 
+    padding: 60px 40px 40px !important; 
+    height: 800px;
+}
 .modal-body .title{
     color: white;
     background: #222222;
@@ -52,10 +55,17 @@
 }
 
 #t1p1-dropzone {
-  height: 80px;
+  height:90px;
+  width: 150px;
+/*  position: absolute;*/
+  left: 10px;
+  color: darkgrey;
+  width: 150px;
+  border: 3px solid;
 }
 
 .dropzone {
+  color: darkgrey;
   background-color: #bfe4ff;
   border: dashed 4px transparent;
   border-radius: 4px;
@@ -77,7 +87,7 @@
 
 .drag-drop {
   display: inline-block;
-  min-width: 40px;
+  min-width: 20px;
   padding: 2em 0.5em;
   margin: 1rem 0 0 1rem;
 
@@ -87,7 +97,6 @@
 
   touch-action: none;
   transform: translate(0px, 0px);
-
   transition: background-color 0.3s;
 }
 

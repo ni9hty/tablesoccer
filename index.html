@@ -23,6 +23,8 @@
  
 <script src="js/cursor.v1.0.0.js"></script>
 <script src="js/db.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+<script src="js/drag.js"></script>
 <script>
 $(document).ready(function(){
     $('#show_admin').click(function() {
@@ -100,11 +102,11 @@ interact('.item').draggable({
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <div class="modal-body">
               <h3 class="title">New Match</h3>
-	      <div id="Team1_PLayer1" class="drag-drop"> gizn </div>
-	      <div id="Team1_PLayer2" class="drag-drop"> Nico </div>
-	      <div id="Team2_PLayer1" class="drag-drop"> David </div>
-	      <div id="Team2_PLayer2" class="drag-drop"> Phil </div>
-	      <div id="t1p1-dropzone" class="dropzone">#t1p1-dropzone</div>
+	      <div id="gizn" class="drag-drop"> gizn </div>
+	      <div id="Nico" class="drag-drop"> Nico </div>
+	      <div id="David" class="drag-drop"> David </div>
+	      <div id="Phil" class="drag-drop"> Phil </div>
+	      <div id="t1p1-dropzone" class="dropzone">      Team1 Player1</div>
             </div>
           </div>
         </div>
@@ -112,7 +114,6 @@ interact('.item').draggable({
     </div>
   </div>
 </div>
-
 
  <div id="show_admin">Admin panel</div>
 <div class="row">
