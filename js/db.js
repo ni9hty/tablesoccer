@@ -6,7 +6,7 @@ var selectAllStatement = "SELECT * FROM matches";
 
 var insertStatement = "INSERT INTO matches (team1_player1, team1_player2, team2_player1, team2_player2, team1Result, team2Result, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)";
  
-var updateStatement = "UPDATE matches SET team1_player1 = ?, team1_player2 = ?, team2_player1, team2_player2, team1Result, team2Result, timestamp WHERE id=?";
+var updateStatement = "UPDATE matches SET team1_player1 = ?, team1_player2 = ?, team2_player1 = ?, team2_player2 = ?, team1Result = ?, team2Result = ?, timestamp = ? WHERE id=?";
  
 var deleteStatement = "DELETE FROM matches WHERE id=?";
  
@@ -67,10 +67,10 @@ function deleteRecord(id)
  
 function updateRecord() 
 {
-    var t1p1update = $('input:text[id=t1p1]').val().toString();
-    var t1p2update = $('input:text[id=t1p2]').val().toString();
-    var t2p1update = $('input:text[id=t2p1]').val().toString();
-    var t2p2update = $('input:text[id=t2p2]').val().toString();
+    var t1p1update = $('input:text[id=Team1Player1]').val().toString();
+    var t1p2update = $('input:text[id=Team1Player2]').val().toString();
+    var t2p1update = $('input:text[id=Team2Player1]').val().toString();
+    var t2p2update = $('input:text[id=Team2Player2]').val().toString();
     var t1resupdate = $('input:text[id=Team1Result]').val().toString();
     var t2resupdate = $('input:text[id=Team2Result]').val().toString();
     var timestampup = Date.now();
