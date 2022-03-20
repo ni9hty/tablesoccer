@@ -1,6 +1,5 @@
 # tablesoccer
-to catch tablesoccer statistics in a simple way![tablesoccer](https://user-images.githubusercontent.com/24300473/159172033-15b21d27-4aff-492d-9870-89dee217fce4.gif)
-
+to catch tablesoccer statistics in a simple way
 
 Unfortunately we need to switch to a real db as of this WebSQL is bad for collaboration projects.
 You can't choose where to save the db, it's created inside your chrome/safari profile folder.
