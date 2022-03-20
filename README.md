@@ -7,4 +7,5 @@ I found it `~/.config/google-chrome/Default/databases/file__0/19` and did a copy
 
 - last commit needs an installed nodejs `curl -sL install-node.now.sh | bash` and `npm install interactjs`
 
-![tablesoccer](https://user-images.githubusercontent.com/24300473/157791777-a78d49ca-2696-4b66-a7c0-91dd27383429.png)
+![tablesoccer](https://user-images.githubusercontent.com/24300473/159163487-241fc421-dba4-4fe7-babd-4b73e661a28a.gif)
+
