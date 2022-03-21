@@ -78,7 +78,7 @@ interact('.dropzone').dropzone({
     //event.relatedTarget.textContent = 'Dragged out'
   },
   ondrop: function (event) {
-    event.relatedTarget.textContent = 'Dropped'
+    event.relatedTarget.textContent = `${event.relatedTarget.id}` + ' Dropped'
   },
   ondropdeactivate: function (event) {
     // remove active dropzone feedback
