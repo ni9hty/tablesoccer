@@ -126,7 +126,7 @@ function showRecords() // Function For Retrive data from Database Display record
     db.transaction(function (tx) {
         tx.executeSql(selectAllStatement, [], function (tx, result) {
             dataset = result.rows;
-            for (var i = 0, item = null; i < dataset.length; i++) {
+            for (var i = dataset.length - 1, item = null; i >= 0; i--) {
                 item = dataset.item(i);
 		var unixtime = item['timestamp']
 		var newDate = new Date();

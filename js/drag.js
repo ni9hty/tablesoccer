@@ -75,10 +75,27 @@ interact('.dropzone').dropzone({
     // remove the drop feedback style
     event.target.classList.remove('drop-target')
     event.relatedTarget.classList.remove('can-drop')
-    //event.relatedTarget.textContent = 'Dragged out'
+    event.relatedTarget.textContent = `${event.relatedTarget.id}`
   },
   ondrop: function (event) {
     event.relatedTarget.textContent = `${event.relatedTarget.id}` + ' Dropped'
+	  if (event.target.id == 't1p1-dropzone') {
+		  var T1P1 = event.relatedTarget.id;
+		  alert (T1P1 + ' was dropped to ' + event.target.id)
+	  }
+	  if (event.target.id == 't1p2-dropzone') {
+		  var T1P2 = event.relatedTarget.id;
+		  alert (T1P2 + ' was dropped to ' + event.target.id)
+	  }
+	  if (event.target.id == 't2p1-dropzone') {
+		  var T2P1 = event.relatedTarget.id;
+		  alert (T2P1 + ' was dropped to ' + event.target.id)
+	  }
+	  if (event.target.id == 't2p2-dropzone') {
+		  var T2P2 = event.relatedTarget.id;
+		  alert (T2P2 + ' was dropped to ' + event.target.id)
+	  }
+
   },
   ondropdeactivate: function (event) {
     // remove active dropzone feedback
@@ -86,6 +103,18 @@ interact('.dropzone').dropzone({
     event.target.classList.remove('drop-target')
   }
 })
+
+function insertDropped()
+{
+	var T1RES = $('input:text[id=Team1_Result]').val();
+	var T2RES = $('input:text[id=Team2_Result]').val();
+	if (T1P1 != null && T1P2 != null && T2P1 != null && T2P2 != null && T1RES != null && T2RES != null) {
+	  alert('allet jesetzt, kann losjehn')
+	} else {
+	  alert('missing Value to insert..!')
+	}
+}
+$("#SubmitBtn").click(insertDropped);
 
 interact('.drag-drop')
   .draggable({
