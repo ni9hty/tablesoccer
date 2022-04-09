@@ -1,3 +1,8 @@
+//init variables
+T1P1 = "";
+T1P2 = "";
+T2P1 = "";
+T2P2 = "";
 
 // target elements with the "draggable" class
 interact('.draggable')
@@ -80,20 +85,20 @@ interact('.dropzone').dropzone({
   ondrop: function (event) {
     event.relatedTarget.textContent = `${event.relatedTarget.id}` + ' Dropped'
 	  if (event.target.id == 't1p1-dropzone') {
-		  var T1P1 = event.relatedTarget.id;
-		  alert (T1P1 + ' was dropped to ' + event.target.id)
+	    T1P1 = event.relatedTarget.id;
+	    //alert (T1P1 + ' was dropped to ' + event.target.id)
 	  }
 	  if (event.target.id == 't1p2-dropzone') {
-		  var T1P2 = event.relatedTarget.id;
-		  alert (T1P2 + ' was dropped to ' + event.target.id)
+	    T1P2 = event.relatedTarget.id;
+	    //alert (T1P2 + ' was dropped to ' + event.target.id)
 	  }
 	  if (event.target.id == 't2p1-dropzone') {
-		  var T2P1 = event.relatedTarget.id;
-		  alert (T2P1 + ' was dropped to ' + event.target.id)
+            T2P1 = event.relatedTarget.id;
+	    //alert (T2P1 + ' was dropped to ' + event.target.id)
 	  }
 	  if (event.target.id == 't2p2-dropzone') {
-		  var T2P2 = event.relatedTarget.id;
-		  alert (T2P2 + ' was dropped to ' + event.target.id)
+	    T2P2 = event.relatedTarget.id;
+	    //alert (T2P2 + ' was dropped to ' + event.target.id)
 	  }
 
   },
@@ -106,15 +111,16 @@ interact('.dropzone').dropzone({
 
 function insertDropped()
 {
-	var T1RES = $('input:text[id=Team1_Result]').val();
-	var T2RES = $('input:text[id=Team2_Result]').val();
-	if (T1P1 != null && T1P2 != null && T2P1 != null && T2P2 != null && T1RES != null && T2RES != null) {
-	  alert('allet jesetzt, kann losjehn')
-	} else {
-	  alert('missing Value to insert..!')
-	}
+  var T1RES = $('input:text[id=Team1_Result]').val();
+  var T2RES = $('input:text[id=Team2_Result]').val();
+  if (T1P1 && T1P2 && T2P1 && T2P2 && T1RES && T2RES ) {
+    var timestamp = Date.now();
+    var insertStatement = "INSERT INTO matches (team1_player1, team1_player2, team2_player1, team2_player2, team1Result, team2Result, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    db.transaction(function (tx) { tx.executeSql(insertStatement, [T1P1, T1P2, T2P1, T2P2, T1RES, T2RES, timestamp], loadAndReset, onError); });
+  } else {
+    alert("missing Value to insert..!\n" + "T1P1: " + T1P1 + "\n T1P2: " + T1P2 + "\n T2P1: " + T2P1 + "\n T2P2: " + T2P2 + "\n T1RES: " + T1RES + "\n T2RES: " + T2RES)
+  }
 }
-$("#SubmitBtn").click(insertDropped);
 
 interact('.drag-drop')
   .draggable({
@@ -129,3 +135,10 @@ interact('.drag-drop')
     // dragMoveListener from the dragging demo above
     listeners: { move: dragMoveListener }
   })
+
+$(document).ready(function ()
+  {
+  ;
+    $("#SubmitBtn").click(insertDropped);
+  });
+
