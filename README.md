@@ -1,3 +1,5 @@
+# Project deprecated in favor of collaborating with  https://github.com/Khaled-Proof/kick-Some-Balls
+
 # tablesoccer
 to catch tablesoccer statistics in a simple way
 
